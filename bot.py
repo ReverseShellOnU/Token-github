@@ -1,3 +1,4 @@
+import os
 # Definir los comandos Bash como cadenas de texto
 comandos = [
     "cd ~/Documents/botnet",
